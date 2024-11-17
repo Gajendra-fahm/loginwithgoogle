@@ -1,14 +1,22 @@
-import React from "react";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Login from "./Componet/Pages/Login";
+import Dashboard from "./Componet/Pages/Dashboard";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
-  const apiUrl = process.env.REACT_APP_API_URL;
-  const appVersion = process.env.REACT_APP_VERSION;
+  const GoogleAuthWrapped = () => {
+    return (
+      <GoogleOAuthProvider clientId={`${process.env.REACT_APP_CLIENT_ID}`}>
+        <Login></Login>
+      </GoogleOAuthProvider>
+    );
+  };
   return (
-    <div className="App">
-      <h1>React App with TypeScript</h1>
-      <p>API URL: {apiUrl}</p>
-      <p>App Version: {appVersion}</p>
+    <div>
+      <Routes>
+        <Route path="/login" element={<GoogleAuthWrapped />} />
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }
