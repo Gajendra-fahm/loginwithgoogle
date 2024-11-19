@@ -6,7 +6,7 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen flex justify-center items-center bg-white ">
-      <p>{apiUrl}</p>
+      
       <LoginForm />
     </div>
   );
