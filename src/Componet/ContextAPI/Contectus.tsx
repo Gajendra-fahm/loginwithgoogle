@@ -1,9 +1,10 @@
 import { useContext } from "react"
-import { data } from "./Home"
+import { data } from "./Home";
 
-const AboutUs = () => {
+
+const Contextus = () => {
   const getData= useContext(data)
-  console.log("getData", getData);
+
   
   if (!getData) {
     return <p>Context is not available</p>;
@@ -20,4 +21,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default Contextus

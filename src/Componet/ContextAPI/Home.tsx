@@ -1,5 +1,8 @@
 import React, { createContext, useState } from 'react'
-import AboutUs from './AboutUs';
+import Contextus from './Contectus';
+
+
+
 
 interface DataContextType {
     value: any;
@@ -11,7 +14,7 @@ const Home = () => {
     const [value, setValue] = useState<string>("Hello from Context!");
   return (
     <data.Provider value={{value, setValue}}>
-       <AboutUs/>
+       <Contextus/>
     </data.Provider>
    
   )
