@@ -2,7 +2,7 @@
 
 interface IDashboardHead{
     children:React.ReactNode;
-    pageTitle:string
+    pageTitle:any
 }
 
 const DashboarHead = (props:IDashboardHead) => {

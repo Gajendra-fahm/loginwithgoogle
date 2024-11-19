@@ -1,21 +1,20 @@
-import  { useContext } from 'react'
-import {data} from "./Home"
+import { useContext } from "react"
+import { data } from "./Home"
+
 const AboutUs = () => {
-    const getValue = useContext(data);
-
-    if (!getValue) {
-        return <p>Context is not available</p>; // Handle null case if needed
-      }
-    
-   const {value, setValue }= getValue
-
-   const handleUpdate = () => {
-    setValue("Updated Context Value!");
-  };
-    
+  const getData= useContext(data)
+  console.log("getData", getData);
+  
+  if (!getData) {
+    return <p>Context is not available</p>;
+  }
+  const {value, setValue}=getData
+ const handleUpdate=()=>{
+  setValue("Hello")
+ }
   return (
     <div>
-      <p>{value}</p>
+     <p>{value}</p>
       <button onClick={handleUpdate}>Update Value</button>
     </div>
   )
