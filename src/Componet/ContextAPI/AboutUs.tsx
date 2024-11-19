@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import  { useContext } from 'react'
 import {data} from "./Home"
 const AboutUs = () => {
     const getValue = useContext(data);

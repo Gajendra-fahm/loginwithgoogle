@@ -42,9 +42,5 @@ function App() {
             </DashboarHead>
           }
         />
-      </Routes>
-    </div>
-  );
-}
-
-export default App;
+/>
+fault App;
