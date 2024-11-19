@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import useCustomAPI from "../Hook/useCustomAPI";
 import useDebounce from "../Hook/useDebounce";
 
@@ -28,6 +28,7 @@ const ProductList = () => {
     isFeatched.current = true;
     featchApi();
   }, []);
+
   
 
   return (

@@ -1,17 +1,20 @@
 import React, { createContext, useState } from 'react'
-import AboutUs from './AboutUs';
+import Contextus from './Contectus';
+
+
+
 
 interface DataContextType {
-    value: string;
-    setValue: React.Dispatch<React.SetStateAction<string>>;
+    value: any;
+    setValue: React.Dispatch<React.SetStateAction<any>>;
   }
 
-export const data = createContext<DataContextType |null>(null)
+export const data= createContext< DataContextType| null>(null)
 const Home = () => {
     const [value, setValue] = useState<string>("Hello from Context!");
   return (
     <data.Provider value={{value, setValue}}>
-       <AboutUs/>
+       <Contextus/>
     </data.Provider>
    
   )
